@@ -816,9 +816,9 @@ elif type == 0:
             input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
 maxlim = 0
 if cc == "91":
-    maxlim = 500
+    maxlim = 500000
 else:
-    maxlim = 100
+    maxlim = 100000
 if nm > maxlim:
     print('\n\n\tSorry Due To Misuse Of This Script We Only Provide ' +
           str(maxlim) + ' SMS At Once...\n\n')
@@ -844,7 +844,7 @@ if not cc.strip() == "91":
     exit()
 ch = [i for i in range(17)]
 cbomb = False
-if pn.strip() == '' or dl <= 0 or nm < 0:
+if pn.strip() == '' or dl < 0 or nm < 0:
     print('\n\n\tSeems Like You Have Given Wrong Inputs...')
     input('\n\t\tPress Enter To Exit...')
     banner()
